@@ -1,9 +1,13 @@
 import { Controller, Get } from '@nestjs/common';
+import { TicketsService } from './tickets.service';
 
 @Controller('tickets')
 export class TicketsController {
+
+    constructor(private readonly ticketsService: TicketsService) {}
+
     @Get()
     listarChamados() {
-        return 'Lista de chamados'
+        return this.ticketsService.listarChamados()
     }
 }
