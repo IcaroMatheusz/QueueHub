@@ -1,7 +1,7 @@
 import Login from './components/Login'
 import './App.css'
 
-function App() {
+function LoginPage() {
 
   return (
     <>
@@ -12,4 +12,4 @@ function App() {
   )
 }
 
-export default App
+export default LoginPage
