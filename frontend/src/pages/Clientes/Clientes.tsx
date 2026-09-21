@@ -1,13 +1,13 @@
 import Header from "../../components/header/HeaderHome";
-import MainHome from "../../components/home/MainHomeLayout";
+import MainLayout from "../../components/MainLayout";
 
 function Cliente() {
   return (
     <>
-      <Header />
-      <MainHome>
+      <MainLayout>
+        <Header />
         <h1>Clientes</h1>
-      </MainHome>
+      </MainLayout>
     </>
   );
 }

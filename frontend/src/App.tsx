@@ -4,7 +4,7 @@ import RegisterPage from './pages/FormPages/RegisterPage'
 import Dashboard from './pages/HomePages/Dashboard'
 import OrdemDeServico from './pages/OrdemDeServicoPages/OrdemDeServico'
 import Tecnicos from './pages/Tecnicos/Tecnicos'
-import Cliente from './pages/Cliente/Cliente'
+import Clientes from './pages/Clientes/Clientes'
 import Parametros from './pages/Settings/Parametros'
 import './App.css'
 
@@ -17,7 +17,7 @@ function App() {
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/os" element={<OrdemDeServico />} />
-        <Route path="/cliente" element={<Cliente />} />
+        <Route path="/clientes" element={<Clientes />} />
         <Route path="/tecnicos" element={<Tecnicos />} />
         <Route path="/configuracoes" element={<Parametros />} />
       </Routes>
