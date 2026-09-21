@@ -1,18 +1,10 @@
+import BarChart from "./BarChart";
+
 function Charts() {
   return (
     <section className="grid grid-cols-1 gap-5 lg:grid-cols-[2fr_1.15fr]">
 
-      <div className="min-w-0 rounded-xl border border-base-300 bg-base-200 p-5 shadow-sm">
-        <h3 className="text-lg font-bold">Ordens por Status</h3>
-
-        <p className="text-xs text-base-content/50">Últimos 7 dias</p>
-
-        <div className="flex h-64 items-center justify-center">
-          <p className="text-sm text-base-content/50">
-            Gráfico de barras será exibido aqui
-          </p>
-        </div>
-      </div>
+      <BarChart/>
 
 
       <div className="rounded-xl border border-base-300 bg-base-200 p-5 shadow-sm">

@@ -1,8 +1,8 @@
-import Header from "../../components/home/Header/HeaderHome";
+import Header from "../../components/header/HeaderHome";
 import MainHome from "../../components/home/MainHomeLayout";
-import Charts from "../../components/home/Charts";
+import Charts from "../../components/home/Charts/Charts";
 import ListCard from "../../components/home/ListCard";
-import OsRecentes from "../../components/home/OSRecentes";
+import OsRecentes from "../../components/home/OsRecentes.tsx";
 import CreateOsButton from "../../components/home/Modal/CreateOsButton";
 
 function Dashboard() {

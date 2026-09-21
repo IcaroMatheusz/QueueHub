@@ -1,5 +1,5 @@
-import DropDownMenu from "./DropDownMenu";
-import ProfileDropDown from "./ProfileDropDown";
+import DropDownMenu from "./DropDownMenu.tsx";
+import ProfileDropDown from "./ProfileDropDown.tsx";
 
 function Header() {
   return (
