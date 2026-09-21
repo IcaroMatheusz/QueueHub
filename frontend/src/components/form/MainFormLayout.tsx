@@ -1,17 +1,23 @@
-type MainFormProps = {
-    children: React.ReactNode;
-};
 
+import type { ReactNode } from "react";
 import logoQueueHub from "../../assets/logoqueuehub.png";
 
-function MainForm({ children}: MainFormProps) {
+type MainFormProps = {
+  children: ReactNode;
+};
+
+function MainForm({ children }: MainFormProps) {
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen bg-base-100 gap-8">
-        <img src={logoQueueHub} alt="QueueHub Logo" className="w-full max-w-1/10" />
-        {children}
+    <main className="flex min-h-screen flex-col items-center justify-center gap-6 bg-base-100 px-4 py-8">
+      <img
+        src={logoQueueHub}
+        alt="QueueHub Logo"
+        className="w-32 object-contain"
+      />
+
+      {children}
     </main>
   );
 }
 
-
-export default MainForm
+export default MainForm;

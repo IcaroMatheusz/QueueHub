@@ -1,17 +1,18 @@
-import AuthForm from '../../components/form/Form'
-import MainForm from '../../components/form/MainFormLayout'
+import AuthForm from "../../components/form/Form";
+import MainForm from "../../components/form/MainFormLayout";
 
 function LoginPage() {
   return (
-    <MainForm >
+    <MainForm>
       <AuthForm
-      formTitle='Login'
-      buttonName='Login'
-      link='/register'
-      textparagraph='Don’t have an account? '
+        formTitle="Bem-vindo de volta!"
+        buttonName="Entrar"
+        link="/register"
+        linkText="Cadastre-se"
+        textparagraph="Ainda não tem uma conta?"
       />
     </MainForm>
-  )
+  );
 }
 
-export default LoginPage
+export default LoginPage;

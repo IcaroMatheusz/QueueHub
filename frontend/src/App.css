@@ -1,2 +1,37 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+@plugin "daisyui/theme" {
+  name: "queuehub";
+  default: true;
+  color-scheme: dark;
+
+  --color-base-100: #111827;
+  --color-base-200: #172033;
+  --color-base-300: #243149;
+  --color-base-400: #2d3d57;
+  --color-base-500: #3a4b66;
+
+  --color-base-content: #f1f5f9;
+
+  --color-primary: #3b82f6;
+  --color-primary-content: #ffffff;
+
+  --color-secondary: #06b6d4;
+  --color-secondary-content: #082f49;
+
+  --color-accent: #818cf8;
+  --color-accent-content: #1e1b4b;
+
+  --color-neutral: #1e293b;
+  --color-neutral-content: #f1f5f9;
+
+  --color-info: #38bdf8;
+  --color-success: #34d399;
+  --color-warning: #fbbf24;
+  --color-error: #f87171;
+
+  --radius-selector: 0.5rem;
+  --radius-field: 0.5rem;
+  --radius-box: 0.75rem;
+}

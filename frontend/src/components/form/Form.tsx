@@ -1,35 +1,108 @@
+
+import { Link } from "react-router-dom";
+import type { SubmitEventHandler } from "react";
+
 type AuthFormProps = {
-  formTitle: string,
-  confirmPassword?: boolean,
-  buttonName: string,
-  link: string,
-  textparagraph: string
-}
+  formTitle: string;
+  confirmPassword?: boolean;
+  buttonName: string;
+  link: string;
+  linkText: string;
+  textparagraph: string;
+  onSubmit?: SubmitEventHandler<HTMLFormElement>;
+};
 
-import { Link } from 'react-router-dom'
-
-function AuthForm( {formTitle, confirmPassword, buttonName, link, textparagraph}: AuthFormProps ) {
-
+function AuthForm({
+  formTitle,
+  confirmPassword = false,
+  buttonName,
+  link,
+  linkText,
+  textparagraph,
+  onSubmit,
+}: AuthFormProps) {
   return (
-    <div className="bg-base-200 p-8 rounded-lg shadow-md w-full max-w-md">
-      <h2 className="text-2xl font-bold mb-4">{formTitle}</h2>
-      <form>
-        <input type="text" name="email" id="email" placeholder="Email" className="w-full border rounded-lg p-3 mt-4"/>
-        <input type="password" name="password" id="password" placeholder="Password" className="w-full border rounded-lg p-3 mt-4"/>
+    <div className="w-full max-w-md rounded-xl bg-base-200 p-8 shadow-lg">
+      <h2 className="mb-6 text-2xl font-bold text-base-content">
+        {formTitle}
+      </h2>
+
+      <form onSubmit={onSubmit} className="flex flex-col gap-4">
+        <div className="flex flex-col gap-1">
+          <label htmlFor="email" className="text-sm font-medium">
+            E-mail
+          </label>
+
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Digite seu e-mail"
+            autoComplete="email"
+            required
+            className="input input-bordered w-full"
+          />
+        </div>
+
+        <div className="flex flex-col gap-1">
+          <label htmlFor="password" className="text-sm font-medium">
+            Senha
+          </label>
+
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Digite sua senha"
+            autoComplete={
+              confirmPassword ? "new-password" : "current-password"
+            }
+            required
+            className="input input-bordered w-full"
+          />
+        </div>
+
         {confirmPassword && (
-          <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password" className="w-full border rounded-lg p-3 mt-4"/>
+          <div className="flex flex-col gap-1">
+            <label
+              htmlFor="confirmPassword"
+              className="text-sm font-medium"
+            >
+              Confirmar senha
+            </label>
+
+            <input
+              type="password"
+              name="confirmPassword"
+              id="confirmPassword"
+              placeholder="Confirme sua senha"
+              autoComplete="new-password"
+              required
+              className="input input-bordered w-full"
+            />
+          </div>
         )}
-        <p className="text-sm text-slate-300 mt-2">{textparagraph} 
-          <Link to={link}>
-            <span className='text-sky-300 font-bold hover:underline'>Click here</span>
+
+        <p className="text-sm text-base-content/70">
+          {textparagraph}{" "}
+          <Link
+            to={link}
+            className="font-bold text-primary hover:underline"
+          >
+            {linkText}
           </Link>
-          </p>
-        <button type="submit" className="bg-base-700 text-white py-2 px-4 rounded-lg hover:bg-base-800 mt-4 font-bold transition-all">
+        </p>
+
+        <button
+          type="submit"
+          data-theme="queuehub"
+          className="btn btn-primary mt-2 w-full"
+        >
           {buttonName}
         </button>
       </form>
     </div>
-  )
+  );
 }
 
-export default AuthForm
+export default AuthForm;

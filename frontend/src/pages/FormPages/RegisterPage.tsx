@@ -3,17 +3,18 @@ import MainForm from "../../components/form/MainFormLayout";
 
 function RegisterPage() {
   return (
-    <>
+    <div>
       <MainForm>
         <AuthForm
-          formTitle="Register"
-          buttonName="Register"
+          formTitle="Crie sua conta"
           confirmPassword={true}
+          buttonName="Cadastrar"
           link="/"
-          textparagraph="Already have an account? "
+          linkText="Faça login"
+          textparagraph="Já possui uma conta?"
         />
       </MainForm>
-    </>
+    </div>
   );
 }
 
