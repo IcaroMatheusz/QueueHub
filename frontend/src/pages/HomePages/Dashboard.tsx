@@ -1,8 +1,9 @@
-import Header from "../../components/home/HeaderHome";
+import Header from "../../components/home/Header/HeaderHome";
 import MainHome from "../../components/home/MainHomeLayout";
 import Charts from "../../components/home/Charts";
 import ListCard from "../../components/home/ListCard";
 import OsRecentes from "../../components/home/OSRecentes";
+import CreateOsButton from "../../components/home/Modal/CreateOsButton";
 
 function Dashboard() {
   return (
@@ -22,7 +23,7 @@ function Dashboard() {
               </p>
             </div>
 
-            <button className="btn btn-primary">+ Nova Ordem de Serviço</button>
+            <CreateOsButton />
           </section>
 
           <ListCard />
